@@ -23,5 +23,5 @@ export default {
 </script>
 }
 <style lang="scss">
-@import '../../assets/scss/login.scss';
+@import './index.scss';
 </style>

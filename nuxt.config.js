@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -35,7 +36,27 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
+
+  // axios
+  axios: {
+    baseURL: 'http://localhost:2019/api',
+    headers: {
+      common: {
+        "Accept": "application/json, text/plain, */*"
+      },
+      delete: {},
+      get: {},
+      head: {},
+      post: {},
+      put: {},
+      patch: {}
+    }
+  },
+
+  styleResources: {
+    scss: ['./assets/scss/*.scss']
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

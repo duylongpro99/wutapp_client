@@ -5,7 +5,6 @@ export const state = () => ({
 })
 
 export const mutations = {
-
     async getAll(){
         console.log('call getAll')
         const res = await this.$axios.$get('/blogs');

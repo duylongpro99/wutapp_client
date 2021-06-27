@@ -36,7 +36,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
 
   // axios
   axios: {
@@ -52,6 +52,10 @@ export default {
       put: {},
       patch: {}
     }
+  },
+
+  styleResources: {
+    scss: ['./assets/scss/*.scss']
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

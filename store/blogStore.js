@@ -10,6 +10,6 @@ export const mutations = {
         console.log('call getAll')
         const res = await this.$axios.$get('/blogs');
         console.log(res);
-        return res.json();
+        return res;
     }
 }

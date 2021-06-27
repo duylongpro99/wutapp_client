@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="getAll()">Get blogs</button>
+    <button @click="getAll()">Get blogs API</button>
     <button @click="getBlogs">Get blogs</button>
   </div>
 </template>

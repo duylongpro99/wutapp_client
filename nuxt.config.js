@@ -40,7 +40,7 @@ export default {
 
   // axios
   axios: {
-    prefix: 'api',
+    baseURL: 'http://localhost:2019/api',
     headers: {
       common: {
         "Accept": "application/json, text/plain, */*"

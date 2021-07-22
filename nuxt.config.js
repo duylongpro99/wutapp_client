@@ -21,10 +21,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['ant-design-vue/dist/antd.css'],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/antd-ui'],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -36,7 +36,12 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
+  modules: [
+    '@nuxtjs/axios', 
+    '@nuxtjs/style-resources', 
+    'nuxt-buefy',
+    ['nuxt-buefy', { css: false, materialDesignIcons: true }],
+  ],
 
   // axios
   axios: {

@@ -7,28 +7,24 @@ import Vue from 'vue';
 export default Vue.extend({
     data() {
         return {
+            name: '',
             email: '',
             password: '',
+            errEmail: '',
         };
     },
     methods: {
         ...mapMutations({
-            loginUser: 'userStore/login',
+            signUp: 'userStore/signUp',
         }),
-        async onLogin(e: any) {
+        onSignUp(e: any) {
             e.preventDefault();
             const user: RegisterUserModel = {
+                Name: this.name,
                 Email: this.email,
                 Password: this.password,
             };
-            // this.loginUser(user);
-            const { token } = await this.$repositories.userRepo.login(user);
-            if (token) {
-                this.$router.push('/');
-            }
-        },
-        clearIconClick() {
-            this.email = '';
+            this.$store.commit('userStore/signUp', user);
         },
     },
 });

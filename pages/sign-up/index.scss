@@ -1,12 +1,12 @@
-.login-page{
+.sign-up-page{
     display: flex;
     justify-content: center;
-    .login-container {
+    .sign-up-container{
         padding: 24px 16px;
         width: 50%;
     }
-    
-    .sign-up-link{
+    .login-link{
         margin-top: 20px;
     }
+
 }

@@ -1,35 +1,37 @@
 <template src="./index.html"></template>
-<script>
+<script lang="ts">
 import { mapMutations } from 'vuex';
-export default {
+import { RegisterUserModel } from 'model/RegisterUserModel';
+import Vue from 'vue';
+
+export default Vue.extend({
     data() {
         return {
-            login: true,
+            email: '',
+            password: '',
         };
-    },
-    beforeCreate() {
-        this.form = this.$form.createForm(this, { name: 'normal_login' });
     },
     methods: {
         ...mapMutations({
             loginUser: 'userStore/login',
         }),
-        handleSubmit(e) {
+        async onLogin(e: any) {
             e.preventDefault();
-            this.form.validateFields((err, values) => {
-                if (!err) {
-                    console.log('Received values of form: ', values);
-                    const loginReq = {
-                        Email: values.email,
-                        Password: values.password,
-                    };
-                    const req = this.loginUser(loginReq);
-                    console.log(req);
-                }
-            });
+            const user: RegisterUserModel = {
+                Email: this.email,
+                Password: this.password,
+            };
+            // this.loginUser(user);
+            const { token } = await this.$repositories.userRepo.login(user);
+            if (token) {
+                this.$router.push('/');
+            }
+        },
+        clearIconClick() {
+            this.email = '';
         },
     },
-};
+});
 </script>
 <style lang="scss">
 @import './index.scss';

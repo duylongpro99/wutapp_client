@@ -1,15 +1,12 @@
-.login-container{
-    h1 {
-        text-align: center;
-        color: red;
+.login-page{
+    display: flex;
+    justify-content: center;
+    .login-container {
+        padding: 24px 16px;
+        width: 50%;
     }
-    #components-form-demo-normal-login .login-form {
-        max-width: 300px;
-    }
-    #components-form-demo-normal-login .login-form-forgot {
-        float: right;
-    }
-    #components-form-demo-norm  al-login .login-form-button {
-        width: 100%;
+    
+    .sign-up-link{
+        margin-top: 20px;
     }
 }

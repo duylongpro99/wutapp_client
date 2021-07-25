@@ -1,9 +1,15 @@
 import createRepository from '~/api/repository';
+import createUserRepository from '~/api/userRepository';
 
 export default (ctx, inject) => {
+    // REGISTER REPOSITORY
     const repositoryWithAxios = createRepository(ctx.$axios);
+    const userRepositoryWithAxios = createUserRepository(ctx.$axios);
+
+    // ASSIGN REPOSITORY FOR GLOBAL VAR
     const repositories = {
-        userRepo: repositoryWithAxios('/auth'),
+        commonRepo: repositoryWithAxios('/'),
+        userRepo: userRepositoryWithAxios('/auth'),
     };
     // inject('repository', repositoryWithAxios('/auth'));
     // inject('blogRepository', repositoryWithAxios('/blog'));

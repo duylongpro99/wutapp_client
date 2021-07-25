@@ -4,14 +4,10 @@ export const state = () => ({
 });
 
 export const mutations = {
-    async login(state, user) {
-        const { token } = await this.$axios.$post('/auth/login', user);
+    setUserToken(state, token) {
         state.token = token;
-        return token;
-    },
-
-    async signUp(state, user) {
-        const res = await this.$axios.$post('auth/register', user);
-        return res;
+        // if (process.browser) {
+        //     localStorage.setItem('authToken', token);
+        // }
     },
 };

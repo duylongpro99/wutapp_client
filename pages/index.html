@@ -1,4 +1,7 @@
 <div class="app-container">
     <nav-bar @toggle-sidebar="toggleSidebar($event)"></nav-bar>
-    <side-bar :is-toggle-sidebar="isToggleSidebar"></side-bar>
+    <div class="content-wrraper">
+        <side-bar :is-toggle-sidebar="isToggleSidebar"></side-bar>
+        <main-content></main-content>
+    </div>
 </div>

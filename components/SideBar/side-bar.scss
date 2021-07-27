@@ -1,7 +1,8 @@
 @import '../../assets/scss/size';
+@import '../../assets/scss/animation';
 .sidebar-container{
-    width: $sidebar-width;
-    min-height: calc(100vh - #{$navbar-size});
+    min-width: $sidebar-width;
+    min-height: 100%;
     background-color: #009688;
     // .toggle-button{
     //     margin-bottom: 0;
@@ -23,4 +24,14 @@
     //     box-shadow: none;
     //     -webkit-box-shadow: none;
     // }
+}
+
+.show-sidebar{
+    animation-name: show-sidebar;
+    animation-duration: 1s;
+}
+
+.hide-sidebar{
+    animation-name: hide-sidebar;
+    animation-duration: 1s;
 }

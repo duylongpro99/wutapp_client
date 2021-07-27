@@ -1,0 +1,18 @@
+@import './size';
+@keyframes hide-sidebar {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-#{$sidebar-width});
+    }
+}
+
+@keyframes show-sidebar {
+    from{
+        transform: translateX(-#{$sidebar-width});
+    }
+    to{
+        transform: translateX(0);
+    }
+}

@@ -9,25 +9,28 @@
             </b-navbar-item>
         </template>
         <template #start>
+            <b-navbar-item @click="toggleSideBar">
+                Toggle
+            </b-navbar-item>
             <b-navbar-item href="#">
                 Home
             </b-navbar-item>
             <b-navbar-item href="#">
                 Documentation
             </b-navbar-item>
-            <b-navbar-dropdown label="Info">
-                <b-navbar-item href="#">
-                    About
-                </b-navbar-item>
-                <b-navbar-item href="#">
-                    Contact
-                </b-navbar-item>
-            </b-navbar-dropdown>
+            <b-navbar-item href="#">
+                About
+            </b-navbar-item>
+            <b-navbar-item href="#">
+                Contact
+            </b-navbar-item>
         </template>
 
         <template #end>
-            <b-navbar-item tag="div">
-
+            <b-navbar-item tag="div" class="search">
+                <b-field>
+                    <b-input placeholder="No label" rounded></b-input>
+                </b-field>
             </b-navbar-item>
         </template>
     </b-navbar>

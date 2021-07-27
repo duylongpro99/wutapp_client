@@ -3,6 +3,11 @@
 import Vue from 'vue';
 export default Vue.extend({
     data() {},
+    methods: {
+        toggleSideBar() {
+            this.$emit('toggle-sidebar');
+        },
+    },
 });
 </script>
 <style lang="scss">

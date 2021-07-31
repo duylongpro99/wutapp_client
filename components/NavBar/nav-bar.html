@@ -10,19 +10,13 @@
         </template>
         <template #start>
             <b-navbar-item @click="toggleSideBar">
-                Toggle
+                <span class="icon">
+                    <font-awesome-icon v-if="!isToggleSidebar":icon="['fas', 'angle-double-right']" />
+                    <font-awesome-icon v-if="isToggleSidebar" :icon="['fas', 'angle-double-left']" />
+                </span>
             </b-navbar-item>
-            <b-navbar-item href="#">
-                Home
-            </b-navbar-item>
-            <b-navbar-item href="#">
-                Documentation
-            </b-navbar-item>
-            <b-navbar-item href="#">
-                About
-            </b-navbar-item>
-            <b-navbar-item href="#">
-                Contact
+            <b-navbar-item href="">
+                <nuxt-link to="blogs/my-blog">Câu chuyện của bạn</nuxt-link>
             </b-navbar-item>
         </template>
 

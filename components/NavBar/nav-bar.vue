@@ -2,7 +2,14 @@
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
-    data() {},
+    props: {
+        isToggleSidebar: {
+            type: Boolean,
+        },
+    },
+    data() {
+        return {};
+    },
     methods: {
         toggleSideBar() {
             this.$emit('toggle-sidebar');

@@ -1,11 +1,13 @@
 <div class="nav-bar-container">
     <b-navbar>
         <template #brand>
-            <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                <img
+            <b-navbar-item>
+                <nuxt-link to="/">
+                    <img
                     src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
                     alt="Lightweight UI components for Vue.js based on Bulma"
-                >
+                    >
+                </nuxt-link>
             </b-navbar-item>
         </template>
         <template #start>
@@ -15,7 +17,7 @@
                     <font-awesome-icon v-if="isToggleSidebar" :icon="['fas', 'angle-double-left']" />
                 </span>
             </b-navbar-item>
-            <b-navbar-item href="">
+            <b-navbar-item v-if="!$store.state.blogStore.isMyBlogPage">
                 <nuxt-link to="blogs/my-blog">Câu chuyện của bạn</nuxt-link>
             </b-navbar-item>
         </template>

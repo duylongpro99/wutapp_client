@@ -25,7 +25,7 @@ export default Vue.extend({
             const { token } = await this.$repositories.userRepo.login(user);
             if (token) {
                 this.setUserToken(token);
-                this.$router.push('/home');
+                this.$router.push('/');
             }
         },
         clearIconClick() {

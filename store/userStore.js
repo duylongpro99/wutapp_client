@@ -6,8 +6,8 @@ export const state = () => ({
 export const mutations = {
     setUserToken(state, token) {
         state.token = token;
-        // if (process.browser) {
-        //     localStorage.setItem('authToken', token);
-        // }
+        if (process.browser) {
+            localStorage.setItem('authToken', token);
+        }
     },
 };

@@ -15,6 +15,14 @@
         </div>
     </div>
     <div class="my-blog-content">
-        Làm gì có chuyện nào để kể
+        <b-carousel>
+            <b-carousel-item v-for="(blog, i) in blogs" :key="i">
+                <section>
+                    <div class="has-text-centered">
+                        <h1 class="title">{{blog.Content}}</h1>
+                    </div>
+                </section>
+            </b-carousel-item>
+        </b-carousel>
     </div>
 </div>

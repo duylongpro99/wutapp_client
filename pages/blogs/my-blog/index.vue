@@ -2,12 +2,16 @@
 <script lang="ts">
 import Vue from 'vue';
 import { mapMutations } from 'vuex';
+import { BlogModel } from '~/model/BlogModel';
 export default Vue.extend({
     data() {
-        return {};
+        return {
+            blogs: [] as BlogModel[],
+        };
     },
     mounted() {
         this.onMyBlogPage(true);
+        this.getBlogsByUser();
     },
 
     destroyed() {
@@ -17,6 +21,14 @@ export default Vue.extend({
         ...mapMutations({
             onMyBlogPage: 'blogStore/onMyBlogPage',
         }),
+        async getBlogsByUser() {
+            let blogs: BlogModel[] =
+                await this.$repositories.blogRepo.getBlog();
+            if (blogs) {
+                blogs = JSON.parse(JSON.stringify(blogs));
+                this.blogs = blogs;
+            }
+        },
     },
 });
 </script>

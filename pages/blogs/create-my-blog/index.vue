@@ -1,6 +1,7 @@
 <template src="./index.html"></template>
 <script lang="ts">
 import Vue from 'vue';
+import { BlogModel } from '~/model/BlogModel';
 export default Vue.extend({
     data() {
         return {
@@ -9,10 +10,19 @@ export default Vue.extend({
         };
     },
     methods: {
-        onCreateBlog() {
-            console.log(this.title, this.content);
+        async onCreateBlog() {
+            const newBlog: BlogModel = {
+                title: this.title,
+                content: this.content,
+            };
+
+            const res = await this.$repositories.blogRepo.addBlog(newBlog);
+            if (res) {
+                console.log(res);
+                this.onClearBlog();
+            }
         },
-        onCancleBlog() {
+        onClearBlog() {
             this.title = '';
             this.content = '';
         },

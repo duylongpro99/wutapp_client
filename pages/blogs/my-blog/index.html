@@ -1,3 +1,20 @@
 <div class="my-blog-container">
-    
+    <div class="my-blog-header">
+        <h2 class="title">Những câu chuyện của tôi</h2>
+        <div class="create-button">
+            <nuxt-link to="/blogs/create-my-blog">
+                <b-button type="is-link is-light">
+                    <span class="icon">
+                        <font-awesome-icon :icon="['fas', 'keyboard']"></font-awesome-icon>
+                    </span>
+                    <span>
+                        Chuyện của tôi
+                    </span>
+                </b-button>
+            </nuxt-link>
+        </div>
+    </div>
+    <div class="my-blog-content">
+        Làm gì có chuyện nào để kể
+    </div>
 </div>

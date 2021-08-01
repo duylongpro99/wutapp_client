@@ -16,4 +16,15 @@
             }
         }
     }
+
+    .carousel-item{
+        .content{
+            height: 40vh;
+            overflow: auto;
+        }
+    }
+    
+    .carousel-indicator{
+        bottom: -50px;
+    }
 }

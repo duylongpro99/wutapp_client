@@ -19,7 +19,8 @@
             <b-carousel-item v-for="(blog, i) in blogs" :key="i">
                 <section>
                     <div class="has-text-centered">
-                        <h1 class="title">{{blog.Content}}</h1>
+                        <h2 class="title" :style="{color: blog.color}">{{blog.Title}}</h2>
+                        <p class="content">{{blog.Content}}</p>
                     </div>
                 </section>
             </b-carousel-item>

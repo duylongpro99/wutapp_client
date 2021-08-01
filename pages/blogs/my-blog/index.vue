@@ -3,6 +3,7 @@
 import Vue from 'vue';
 import { mapMutations } from 'vuex';
 import { BlogModel } from '~/model/BlogModel';
+import { AppUtilities } from '~/util';
 export default Vue.extend({
     data() {
         return {
@@ -27,6 +28,9 @@ export default Vue.extend({
             if (blogs) {
                 blogs = JSON.parse(JSON.stringify(blogs));
                 this.blogs = blogs;
+                this.blogs.forEach((blog: BlogModel) => {
+                    blog.color = AppUtilities.genColor();
+                });
             }
         },
     },

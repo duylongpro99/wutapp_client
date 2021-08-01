@@ -1,0 +1,42 @@
+@import '../../assets/scss/size';
+@import '../../assets/scss/animation';
+.sidebar-container{
+    min-width: $sidebar-width;
+    min-height: 100%;
+    background-color: #009688;
+    // .toggle-button{
+    //     margin-bottom: 0;
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: center;
+    //     .button{
+    //         width: 60px;
+    //         height: 60px;
+    //         border-radius: 50%;
+    //     }
+    // }
+
+    // .panel-container{
+    //     width: 100%;
+    // }
+
+    // .no-border{
+    //     box-shadow: none;
+    //     -webkit-box-shadow: none;
+    // }
+}
+
+.show-sidebar{
+    // animation-name: show-sidebar;
+    // animation-duration: 1s;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0;
+    transform: translateX(0) !important;
+}
+
+.hide-sidebar{
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-#{$sidebar-width}) !important;
+    transition-delay: 0;
+    min-width: 0;
+}

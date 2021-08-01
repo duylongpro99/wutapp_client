@@ -1,0 +1,13 @@
+@import '~/assets/scss/style';
+.create-my-blog-container{
+    width: 100%;
+    padding: $general-padding;
+
+    .buttons-group{
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin: 10px 2px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<div class="my-blog-container">
+    <div class="my-blog-header">
+        <h2 class="title">Những câu chuyện của tôi</h2>
+        <div class="create-button">
+            <nuxt-link to="/blogs/create-my-blog">
+                <b-button type="is-link is-light">
+                    <span class="icon">
+                        <font-awesome-icon :icon="['fas', 'keyboard']"></font-awesome-icon>
+                    </span>
+                    <span>
+                        Gõ gì đó nào
+                    </span>
+                </b-button>
+            </nuxt-link>
+        </div>
+    </div>
+    <div class="my-blog-content">
+        <b-carousel>
+            <b-carousel-item v-for="(blog, i) in blogs" :key="i">
+                <section>
+                    <div class="has-text-centered">
+                        <h2 class="title" :style="{color: blog.color}">{{blog.Title}}</h2>
+                        <p class="content">{{blog.Content}}</p>
+                    </div>
+                </section>
+            </b-carousel-item>
+        </b-carousel>
+    </div>
+</div>

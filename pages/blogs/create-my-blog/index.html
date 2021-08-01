@@ -1,0 +1,12 @@
+<div class="create-my-blog-container">
+    <b-field label="Chủ đề của hôm nay">
+        <b-input placeholder="Không có chủ đề" rounded v-model="title"></b-input>
+    </b-field>
+    <b-field label="Nội dung">
+        <b-input type="textarea" v-model="content"></b-input>
+    </b-field>
+    <div class="buttons-group">
+        <b-button type="is-success" @click="onCreateBlog">Tạo</b-button>
+        <b-button type="is-danger" icon-right="delete" @click="onClearBlog"/>
+    </div>
+</div>

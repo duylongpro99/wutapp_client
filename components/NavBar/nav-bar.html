@@ -1,33 +1,32 @@
 <div class="nav-bar-container">
     <b-navbar>
         <template #brand>
-            <b-navbar-item tag="router-link" :to="{ path: '/' }">
-                <img
+            <b-navbar-item>
+                <nuxt-link to="/">
+                    <img
                     src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
                     alt="Lightweight UI components for Vue.js based on Bulma"
-                >
+                    >
+                </nuxt-link>
             </b-navbar-item>
         </template>
         <template #start>
-            <b-navbar-item href="#">
-                Home
+            <b-navbar-item @click="toggleSideBar">
+                <span class="icon">
+                    <font-awesome-icon v-if="!isToggleSidebar":icon="['fas', 'angle-double-right']" />
+                    <font-awesome-icon v-if="isToggleSidebar" :icon="['fas', 'angle-double-left']" />
+                </span>
             </b-navbar-item>
-            <b-navbar-item href="#">
-                Documentation
+            <b-navbar-item v-if="!$store.state.blogStore.isMyBlogPage">
+                <nuxt-link to="/blogs/my-blog">Câu chuyện của bạn</nuxt-link>
             </b-navbar-item>
-            <b-navbar-dropdown label="Info">
-                <b-navbar-item href="#">
-                    About
-                </b-navbar-item>
-                <b-navbar-item href="#">
-                    Contact
-                </b-navbar-item>
-            </b-navbar-dropdown>
         </template>
 
         <template #end>
-            <b-navbar-item tag="div">
-
+            <b-navbar-item tag="div" class="search">
+                <b-field>
+                    <b-input placeholder="No label" rounded></b-input>
+                </b-field>
             </b-navbar-item>
         </template>
     </b-navbar>

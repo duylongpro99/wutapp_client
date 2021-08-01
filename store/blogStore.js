@@ -1,14 +1,11 @@
 /* eslint-disable no-console */
 /* eslint-disable prettier/prettier */
 export const state = () => ({
-    blogs: ['blog']
+    isMyBlogPage: false,
 })
 
 export const mutations = {
-    async getAll(){
-        console.log('call getAll')
-        const res = await this.$axios.$get('/blogs');
-        console.log(res);
-        return res;
+    onMyBlogPage(state, isOnMyBlog){
+        state.isMyBlogPage = isOnMyBlog;
     }
 }

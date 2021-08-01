@@ -1,0 +1,30 @@
+@import '~/assets/scss/style';
+.my-blog-container{
+    padding: $general-padding;
+    width: 100%;
+    .my-blog-header{
+        display: flex;
+        justify-content: space-between;
+        .title{
+            font-size: 25px;
+            font-style: italic;
+            color: #055052;
+        }
+        .create-button{
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .carousel-item{
+        .content{
+            height: 40vh;
+            overflow: auto;
+        }
+    }
+    
+    .carousel-indicator{
+        bottom: -50px;
+    }
+}

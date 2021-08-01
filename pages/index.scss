@@ -1,0 +1,11 @@
+@import '../assets/scss/size';
+.app-container{
+    min-height: 100vh;
+
+    .content-wrraper{
+        min-height: calc(100vh - #{$navbar-size});
+        width: 100%;
+        display: flex;
+    }
+}
+

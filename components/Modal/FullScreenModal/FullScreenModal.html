@@ -15,12 +15,52 @@
     
             <b-field label="Mô tả dự án">
                 <b-input
-                    type="text"
+                    type="textarea"
                     v-model="projectDescription"
                     placeholder="Mô tả dự án"
                 >
                 </b-input>
             </b-field>
+            <div class="project-date">
+                <b-field label="Ngày bắt đầu">
+                    <b-datepicker v-model="projectStartDate"
+                        :first-day-of-week="1"
+                        placeholder="Chọn ngày bắt đầu...">
+            
+                        <b-button
+                            label="Hôm nay"
+                            type="is-primary"
+                            icon-left="calendar-today"
+                            @click="projectStartDate = new Date()" />
+            
+                        <b-button
+                            label="Xóa"
+                            type="is-danger"
+                            icon-left="close"
+                            outlined
+                            @click="projectStartDate = null" />
+                    </b-datepicker>
+                </b-field>
+                <b-field label="Ngày kết thúc">
+                    <b-datepicker v-model="projectEndDate"
+                        :first-day-of-week="1"
+                        placeholder="Chọn ngày kết thúc...">
+            
+                        <b-button
+                            label="Hôm nay"
+                            type="is-primary"
+                            icon-left="calendar-today"
+                            @click="projectEndDate = new Date()" />
+            
+                        <b-button
+                            label="Xóa"
+                            type="is-danger"
+                            icon-left="close"
+                            outlined
+                            @click="projectEndDate = null" />
+                    </b-datepicker>
+                </b-field>
+            </div>
         </section>
         <footer class="modal-card-foot">
             <b-button
@@ -29,7 +69,8 @@
                 type="is-danger is-light" />
             <b-button
                 label="Tạo"
-                type="is-success is-light" />
+                type="is-success is-light"
+                @click="onCreateProject" />
         </footer>
     </div>
 <!-- </div> -->

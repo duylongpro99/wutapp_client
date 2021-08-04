@@ -12,6 +12,8 @@ export default Vue.extend({
             formProps: {
                 projectName: '',
                 projectDescription: '',
+                projectStartDate: new Date(),
+                projectEndDate: new Date(),
             },
         };
     },

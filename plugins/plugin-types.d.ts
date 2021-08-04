@@ -4,6 +4,7 @@ import Vue from 'vue';
 export class Repositories {
     userRepo: any;
     blogRepo: any;
+    projectRepo: any;
 }
 
 declare module 'vue/types/vue' {

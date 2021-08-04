@@ -1,0 +1,5 @@
+@import '~/assets/scss/mixin';
+.projects-container{
+    @include general-style-container;
+    
+}

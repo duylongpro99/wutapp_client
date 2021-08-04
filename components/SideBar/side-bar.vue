@@ -10,6 +10,7 @@ export default Vue.extend({
     data() {
         return {
             isOpen: this.isToggleSidebar,
+            isActive: true,
         };
     },
     watch: {

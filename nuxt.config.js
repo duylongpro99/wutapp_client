@@ -42,9 +42,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios', 
-    '@nuxtjs/style-resources', 
-    'nuxt-buefy',
-    ['nuxt-buefy', { css: false, materialDesignIcons: true }],
+    '@nuxtjs/style-resources',
+    ['nuxt-buefy', { css: true, materialDesignIcons: true }],
   ],
 
   // axios

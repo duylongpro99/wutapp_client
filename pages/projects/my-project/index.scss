@@ -1,0 +1,15 @@
+@import '~/assets/scss/mixin';
+.my-project-container{
+    @include general-style-container;
+    .my-project-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .create-project-button{
+        button{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+    }
+}

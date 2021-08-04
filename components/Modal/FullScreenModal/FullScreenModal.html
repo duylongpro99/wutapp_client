@@ -1,0 +1,35 @@
+<!-- <div class="full-screen-modal-container"> -->
+    <div class="modal-card" style="width: auto">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Dự án mới</p>
+        </header>
+        <section class="modal-card-body">
+            <b-field label="Tên dự án">
+                <b-input
+                    type="text"
+                    v-model="projectName"
+                    placeholder="Tên dự án"
+                    required>
+                </b-input>
+            </b-field>
+    
+            <b-field label="Mô tả dự án">
+                <b-input
+                    type="text"
+                    v-model="projectDescription"
+                    placeholder="Mô tả dự án"
+                >
+                </b-input>
+            </b-field>
+        </section>
+        <footer class="modal-card-foot">
+            <b-button
+                label="Hủy"
+                @click="$parent.close()"
+                type="is-danger is-light" />
+            <b-button
+                label="Tạo"
+                type="is-success is-light" />
+        </footer>
+    </div>
+<!-- </div> -->

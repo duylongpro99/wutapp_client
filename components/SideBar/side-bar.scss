@@ -1,29 +1,19 @@
 @import '../../assets/scss/size';
 @import '../../assets/scss/animation';
+@import '/assets/scss/style';
 .sidebar-container{
     min-width: $sidebar-width;
     min-height: 100%;
     background-color: #009688;
-    // .toggle-button{
-    //     margin-bottom: 0;
-    //     width: 100%;
-    //     display: flex;
-    //     justify-content: center;
-    //     .button{
-    //         width: 60px;
-    //         height: 60px;
-    //         border-radius: 50%;
-    //     }
-    // }
+    padding: $sidebar-padding;
+    .menu-label{
+        color: #fff !important;
+    }
 
-    // .panel-container{
-    //     width: 100%;
-    // }
-
-    // .no-border{
-    //     box-shadow: none;
-    //     -webkit-box-shadow: none;
-    // }
+    .item-icon{
+        font-size: 12px;
+        height: 100%;
+    }
 }
 
 .show-sidebar{

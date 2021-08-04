@@ -1,0 +1,5 @@
+@import '~/assets/scss/style';
+@mixin general-style-container{
+    width: 100%;
+    padding: $general-padding;
+}

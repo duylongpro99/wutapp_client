@@ -1,0 +1,17 @@
+.modal-card{
+    .modal-card-title{
+        color: #fff;
+    }
+    .modal-card-head,.modal-card-foot{
+        border-radius: 0;
+        background-color: #45ADA8;
+    }
+
+    .modal-card-foot{
+        display: flex;
+        flex-direction: row-reverse;
+        button{
+            margin: 0 5px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="my-project-container">
+    <div class="my-project-header">
+        <div class="title"></div>
+        <div class="create-project-button">
+            <section>
+                <b-button
+                    type="is-primary"
+                    outlined
+                    size="is-medium"
+                    @click="isComponentModalActive = true"
+                    :title="'Tạo dự án'">
+                    <font-awesome-icon :icon="['fas', 'folder-plus']"></font-awesome-icon>
+                </b-button>
+        
+                <b-modal
+                    v-model="isComponentModalActive"
+                    has-modal-card
+                    full-screen
+                    :can-cancel="false">
+                    <FullScreenModal v-bind="formProps" />
+                </b-modal>
+            </section>
+        </div>
+    </div>
+    <div class="my-project-content"></div>
+    <div class="my-project-footer"></div>
+</div>

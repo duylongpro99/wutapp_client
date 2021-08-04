@@ -1,27 +1,29 @@
 
 <div class="sidebar-container"  :class="{'show-sidebar': isOpen, 'hide-sidebar': !isOpen}">
-    <!-- <section>
-        <div class="block toggle-button">
-            <b-button
-                label="Icon"
-                type="is-primary"
-                size="is-medium"
-                @click="isOpen = !isOpen"
-                aria-controls="contentIdForA11y2" />
-        </div>
-    
-        <b-collapse
-            aria-id="contentIdForA11y2"
-            class="panel panel-container"
-            animation="slide"
-            v-model="isOpen"
-            v-bind:class="{'no-border': !isOpen}">
-            <div class="panel-block">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
-                Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. <br/>
-                Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
-            </div>
-        </b-collapse>
-    
-    </section> -->
+    <b-menu>
+        <b-menu-list label="Menu">
+            <b-menu-item icon="information-outline" label="Info"></b-menu-item>
+            <b-menu-item :active="isActive" expanded>
+                <template #label="props">
+                    <font-awesome-icon class="item-icon" :icon="['fas', 'users-cog']"></font-awesome-icon>
+                    Administrator
+                    <b-icon class="is-pulled-right" :icon="props.expanded ? 'menu-down' : 'menu-up'"></b-icon>
+                </template>
+                <b-menu-item icon="account" label="Users"></b-menu-item>
+                </b-menu-item>
+            <b-menu-item icon="account" label="Tài khoản của tôi">
+            </b-menu-item>
+            <b-menu-item icon="view-dashboard" label="Dự án" @click="$router.push('/projects')">
+                <b-menu-item @click="$router.push('/projects/my-project')">
+                    <template #label="props">
+                        <font-awesome-icon class="item-icon" :icon="['fas', 'user-tag']"></font-awesome-icon>
+                        Dự án của tôi
+                    </template>
+                </b-menu-item>
+            </b-menu-item>
+        </b-menu-list>
+        <b-menu-list label="Actions">
+            <b-menu-item label="Đăng xuất"></b-menu-item>
+        </b-menu-list>
+    </b-menu>
 </div>

@@ -22,7 +22,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/style-resources": "^1.2.0",
-    "core-js": "^3.9.1",
+    "core-js": "^3.21.1",
     "fibers": "^5.0.0",
     "node-sass": "^6.0.1",
     "nuxt": "^2.15.7",
